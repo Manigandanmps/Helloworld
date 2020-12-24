@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.0)
-project(meshquality)
+project(helloworld)
 
 set(SRC_DIR code/src)
 set(HDR_DIR code/include)
@@ -28,10 +28,10 @@ set(
     ${HDRS}
 )
 
-add_library(meshquality-static STATIC ${SOURCE_LIST})
+add_library(helloworld-static STATIC ${SOURCE_LIST})
 
-add_executable(meshquality ${SRC_DIR}/main.cpp)
-target_link_libraries(meshquality
+add_executable(helloworld ${SRC_DIR}/main.cpp)
+target_link_libraries(helloworld
     PRIVATE
-    meshquality-static
+    helloworld-static
 )
